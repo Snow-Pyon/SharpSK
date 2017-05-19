@@ -27,7 +27,7 @@ public class MultiverseRegistry {
 	
 	@SuppressWarnings("unchecked")
 	public static void registerMultiv(){
-Skript.registerEvent("MV On Portal Touch",SimpleEvent.class, MVPlayerTouchedPortalEvent.class, "(mv|multiverse) portal ([touch|enter])");
+Skript.registerEvent("MV On Portal Touch",SimpleEvent.class, MVPlayerTouchedPortalEvent.class, "m[ulti]v[erse] portal [(touch|enter)]");
 EventValues.registerEventValue(MVPlayerTouchedPortalEvent.class, Player.class,
 		new Getter<Player, MVPlayerTouchedPortalEvent>() {
 			@Override
@@ -46,7 +46,7 @@ EventValues.registerEventValue(MVPlayerTouchedPortalEvent.class, Location.class,
 				return loc;
 			}
 		}, 0);
-Skript.registerEvent("MV On World Delete",SimpleEvent.class, MVWorldDeleteEvent.class, "(mv|multiverse) world delet[e|ion]");
+Skript.registerEvent("MV On World Delete",SimpleEvent.class, MVWorldDeleteEvent.class, "m[ulti]v[erse] world delet(e|ion)");
 EventValues.registerEventValue(MVWorldDeleteEvent.class, World.class,
 		new Getter<World, MVWorldDeleteEvent>() {
 			@Override
@@ -65,18 +65,18 @@ EventValues.registerEventValue(MVWorldDeleteEvent.class, String.class,
 				return wn;
 			}
 		}, 0);
-Skript.registerEvent("MV On Config Reload",SimpleEvent.class, MVConfigReloadEvent.class, "(mv|multiverse) config reload");
+Skript.registerEvent("MV On Config Reload",SimpleEvent.class, MVConfigReloadEvent.class, "m[ulti]v[erse] config reload");
 
-	Skript.registerEffect(EffMVLoadWorld.class, "(mv|multiverse) load world %string%");
-	Skript.registerEffect(EffMVUnloadWorld.class, "(mv|multiverse) unload world %string%");
-	Skript.registerEffect(EffMVDeleteWorld.class, "(mv|multiverse) delete world %string%");
-	Skript.registerEffect(EffMVCloneWorld.class, "(mv|multiverse) (clone|copy) world %string% to %string%");
-	Skript.registerEffect(EffMVRemovePlayersFromWorld.class, "(mv|multiverse) remove players from world %string%");
+	Skript.registerEffect(EffMVLoadWorld.class, "m[ulti]v[erse] load world %string%");
+	Skript.registerEffect(EffMVUnloadWorld.class, "m[ulti]v[erse] unload world %string%");
+	Skript.registerEffect(EffMVDeleteWorld.class, "m[ulti]v[erse] delete world %string%");
+	Skript.registerEffect(EffMVCloneWorld.class, "m[ulti]v[erse] (clone|copy) world %string% to %string%");
+	Skript.registerEffect(EffMVRemovePlayersFromWorld.class, "m[ulti]v[erse] remove players from world %string%");
 	
-	Skript.registerExpression(ExprUnloadedWorlds.class, String.class, ExpressionType.SIMPLE, "([mv|multiverse]) [all] [the] unloaded worlds");
+	Skript.registerExpression(ExprUnloadedWorlds.class, String.class, ExpressionType.SIMPLE, "[m[ulti]v[erse]] [all] [the] unloaded worlds");
 	
-	Skript.registerCondition(CondMVUnloadedWorld.class, "([mv|multiverse]) world %string% is unloaded");
-	Skript.registerCondition(CondMVNotUnloadedWorld.class, "([mv|multiverse]) world %string% is not unloaded");
+	Skript.registerCondition(CondMVUnloadedWorld.class, "[m[ulti]v[erse]] world %string% is unloaded");
+	Skript.registerCondition(CondMVNotUnloadedWorld.class, "[m[ulti]v[erse]] world %string% is not unloaded");
 	
 	}
 
